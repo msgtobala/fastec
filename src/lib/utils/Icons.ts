@@ -1,7 +1,18 @@
-import Arrow from "../../assets/images/arrow.svg";
-// Import other icons as needed
+import Arrow from "../../assets/icons/arrow.svg";
+import Star from "../../assets/icons/star-1.svg";
+
+interface IconData {
+  src: string;
+  alt: string;
+}
 
 export const Icons = {
-  Arrow,
-  // Add more icons as needed
-};
+  Arrow: {
+    src: Arrow,
+    alt: "Arrow navigation icon",
+  },
+  Star: {
+    src: Star,
+    alt: "Star rating icon",
+  },
+} as const satisfies Record<string, IconData>;
