@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+@theme {
+  --color-primary-text-blue: #0173cd;
+  --color-secondary-blue: #0289f5;
+  --color-tertiary-blue: #5cc4e3;
+  --color--gradient-primary-blue-shade-1: #0064c4;
+  --color--gradient-primary-blue-shade-2: #0055a6;
+  --color--gradient-secondary-blue-shade-1: #00c8ff;
+  --color--gradient-secondary-blue-shade-2: #60c9e6;
+  --color-graycard: #d4d7d4;
+
+  --font-family-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
+
+  --radius-base: 0.5rem;
+}
+
+@layer base {
+  body {
+    font-family: theme(--font-family-jakarta);
+  }
+}
+
+@layer components {
+  /* Component classes here */
+}
+
+@layer utilities {
+  /* Utility classes here */
+}
