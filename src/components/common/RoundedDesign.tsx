@@ -11,11 +11,19 @@ const RoundedDesign = ({
   isTransparent,
   isPointer,
 }: RoundedDesignProps) => {
-  const padding =
-    size === "small" ? 2 : size === "medium" ? 4 : size === "large" ? 5 : 5;
+  const paddingClass =
+    size === "small"
+      ? "p-2"
+      : size === "medium"
+      ? "p-4"
+      : size === "large"
+      ? "p-5"
+      : "p-5";
   return (
     <div
-      className={`rounded-full ${isPointer && "cursor-pointer"} p-${padding} ${
+      className={`rounded-full ${
+        isPointer && "cursor-pointer"
+      } ${paddingClass} ${
         isTransparent
           ? "bg-white border-2 border-gradient-secondary-to-primary"
           : "bg-gradient-secondary-to-primary"

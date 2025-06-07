@@ -7,7 +7,8 @@ function FAQAccordion() {
   const faqs = [
     {
       question: "Smart Suggestions",
-      answer: "We accept all major credit cards, PayPal, and bank transfers.",
+      answer:
+        "Our Smart Suggestions feature uses AI to provide personalized recommendations based on your preferences and past interactions.",
     },
     {
       question: "Market Challenges",
@@ -15,16 +16,19 @@ function FAQAccordion() {
         "Startups in Qatar face hurdles like regulations, competition, funding, & hiring, making local insight key.",
     },
     {
-      question: "Operational Ineffeciencies",
-      answer: "We accept all major credit cards, PayPal, and bank transfers.",
+      question: "Operational Inefficiencies",
+      answer:
+        "Our Smart Suggestions feature uses AI to provide personalized recommendations based on your preferences and past interactions.",
     },
     {
       question: "High Consultancy Rates",
-      answer: "We accept all major credit cards, PayPal, and bank transfers.",
+      answer:
+        "Our Smart Suggestions feature uses AI to provide personalized recommendations based on your preferences and past interactions.",
     },
     {
       question: "Personalized Consultancy",
-      answer: "We accept all major credit cards, PayPal, and bank transfers.",
+      answer:
+        "Our Smart Suggestions feature uses AI to provide personalized recommendations based on your preferences and past interactions.",
     },
   ];
 

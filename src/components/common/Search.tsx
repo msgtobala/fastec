@@ -5,7 +5,7 @@ import { BiRightArrowAlt } from "react-icons/bi";
 const Search = () => {
   const searchItems = [
     "Business Domain",
-    " Region in Quatar",
+    "Region in Qatar",
     "Time slot for enquiry",
   ];
   return (
