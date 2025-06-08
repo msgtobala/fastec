@@ -1,5 +1,4 @@
 import { Images } from "../../lib/utils/Images";
-import "../../tailwind.css";
 import Card from "./Card";
 
 const SmartSuggestion = () => {

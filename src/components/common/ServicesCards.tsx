@@ -2,15 +2,15 @@ import Card from "../hero/Card";
 import { Images } from "../../lib/utils/Images";
 
 const cardData = [
-  { number: "01", title: "Tailored solutions" },
-  { number: "02", title: "Expertise in corporation" },
+  { number: "01", title: "Tailored solutions", isHighlighted: false },
+  { number: "02", title: "Expertise in corporation", isHighlighted: true },
   null,
-  { number: "03", title: "Public Relations Management" },
-  { number: "04", title: "Maximised Efficiency" },
-  { number: "05", title: "Tailored solutions" },
+  { number: "03", title: "Public Relations Management", isHighlighted: true },
+  { number: "04", title: "Maximised Efficiency", isHighlighted: false },
+  { number: "05", title: "Tailored solutions", isHighlighted: true },
   null,
-  { number: "06", title: "Tailored solutions" },
-  { number: "07", title: "Personalised consultancy" },
+  { number: "06", title: "Tailored solutions", isHighlighted: false },
+  { number: "07", title: "Personalised consultancy", isHighlighted: false },
 ];
 
 const ServicesCards = () => {
@@ -46,8 +46,6 @@ const ServicesCards = () => {
           if (!card) {
             return <div key={`empty-${index}`} />;
           }
-          const isHighlighted = [1, 2, 4].includes(index);
-          console.log(isHighlighted, index);
 
           return (
             <Card
@@ -56,7 +54,7 @@ const ServicesCards = () => {
               cardSize="medium"
               cardImage={false}
               cardNumber={card?.number}
-              highlighted={isHighlighted}
+              highlighted={card?.isHighlighted}
             />
           );
         })}
