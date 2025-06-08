@@ -1,17 +1,22 @@
-import InputField from "./InputField";
 import { BiRightArrowAlt } from "react-icons/bi";
+
 import { Images } from "../../lib/utils/Images";
 import { Icons } from "../../lib/utils/Icons";
+import DynamicFormBuilder from "../common/DynamicFormBuilder";
 
-const formFields = [
-  "First Name",
-  "Last Name",
-  "Email Address",
-  "Phone No.",
-  "Business Requirement",
+type FormField = {
+  type: "text" | "email" | "tel" | "textarea";
+  label: string;
+  required: boolean;
+};
+
+const formFields: FormField[] = [
+  { type: "text", label: "First Name", required: true },
+  { type: "text", label: "Last Name", required: true },
+  { type: "email", label: "Email", required: true },
+  { type: "tel", label: "Phone Number", required: true },
+  { type: "textarea", label: "Business Requirements", required: true },
 ];
-
-const formFieldTypes = ["text", "text", "email", "tel", "textarea"];
 
 const ContactUs = () => {
   return (
@@ -57,17 +62,25 @@ const ContactUs = () => {
             Send Us a Message
           </h2>
           <div className="grid grid-cols-2 gap-4 mb-4">
-            {formFields.slice(0, 4).map((field, index) => (
-              <InputField
-                key={index}
-                label={field}
-                type={formFieldTypes[index]}
-              />
+            {formFields.map((field) => (
+              <div
+                key={field.label}
+                className={`w-full ${
+                  field.type === "textarea" ? "col-span-2" : ""
+                }`}
+              >
+                <DynamicFormBuilder
+                  key={field.label}
+                  label={field.label}
+                  type={field.type}
+                  required={field.required}
+                />
+              </div>
             ))}
           </div>
-          <div className="w-full mb-4">
+          {/* <div className="w-full mb-4">
             <InputField label={formFields[4]} type={formFieldTypes[4]} />
-          </div>
+          </div> */}
           <div className="flex justify-end">
             <button
               type="submit"
