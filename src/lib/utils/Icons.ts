@@ -1,5 +1,6 @@
 import Arrow from "../../assets/icons/arrow.svg";
 import Star from "../../assets/icons/star-1.svg";
+import Grow from "../../assets/icons/grow.svg";
 
 interface IconData {
   src: string;
@@ -14,5 +15,9 @@ export const Icons = {
   Star: {
     src: Star,
     alt: "Star rating icon",
+  },
+  Grow: {
+    src: Grow,
+    alt: "Grow icon",
   },
 } as const satisfies Record<string, IconData>;

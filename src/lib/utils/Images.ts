@@ -6,6 +6,11 @@ import PersonEffect from "../../assets/images/person-effect.svg";
 import Person2 from "../../assets/images/person-2-large.svg";
 import ImageHighLighter from "../../assets/images/image-highlighter.svg";
 import ServiceBackground from "../../assets/images/services-background.svg";
+import Flag from "../../assets/images/flag.png";
+import Gdp from "../../assets/images/gdp.svg";
+import TallBuilding from "../../assets/images/tall-building.svg";
+import HandShake from "../../assets/images/hand-shake.svg";
+import Person3 from "../../assets/images/person-3.svg";
 
 interface ImageData {
   src: string;
@@ -44,5 +49,25 @@ export const Images = {
   ServiceBackground: {
     src: ServiceBackground,
     alt: "Service background image",
+  },
+  Flag: {
+    src: Flag,
+    alt: "Flag image",
+  },
+  Gdp: {
+    src: Gdp,
+    alt: "GDP image",
+  },
+  TallBuilding: {
+    src: TallBuilding,
+    alt: "Tall building image",
+  },
+  HandShake: {
+    src: HandShake,
+    alt: "Handshake image",
+  },
+  Person3: {
+    src: Person3,
+    alt: "Person 3 image",
   },
 } as const satisfies Record<string, ImageData>;

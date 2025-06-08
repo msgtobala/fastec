@@ -4,31 +4,53 @@
 
 @theme {
   --color-primary-text-blue: #0173cd;
+  --color-primary-icon-blue: #01a5ea;
+  --color-secondary-text-blue: #016eca;
   --color-secondary-blue: #0289f5;
   --color-tertiary-blue: #5cc4e3;
+  --color-primary-green: #25d366;
+  --color-gray-white: #f8f8f8;
   --color--gradient-primary-blue-shade-1: #0064c4;
   --color--gradient-primary-blue-shade-2: #0055a6;
   --color--gradient-secondary-blue-shade-1: #00c8ff;
   --color--gradient-secondary-blue-shade-2: #60c9e6;
   --color-gray-white: #ffffffb2;
+
+  --shadow-base: 5px 14px 45px 0 rgba(0, 0, 0, 0.6);
+
+  --gradient-secondary-to-primary: linear-gradient(
+    246deg,
+    var(--color--gradient-secondary-blue-shade-1),
+    var(--color--gradient-primary-blue-shade-1)
+  );
+
+  --gradient-accordion: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
   --font-family-jakarta: "Plus Jakarta Sans", sans-serif;
   --font-family-inter: "Inter", sans-serif;
 
-
   --radius-base: 0.5rem;
-  --gradient-secondary-to-primary: linear-gradient(246deg,
-      var(--color--gradient-secondary-blue-shade-1),
-      var(--color--gradient-primary-blue-shade-1));
+  --gradient-secondary-to-primary: linear-gradient(
+    246deg,
+    var(--color--gradient-secondary-blue-shade-1),
+    var(--color--gradient-primary-blue-shade-1)
+  );
+  --radius-search: 70px;
 }
 
 @layer base {
   body {
     font-family: theme(--font-family-jakarta);
+    background-color: theme(--color-gray-white);
   }
 }
 
 @layer components {
-
   /* Component classes here */
 
   .smart-suggestion-person {
@@ -46,14 +68,86 @@
 }
 
 @layer utilities {
-
   /* Utility classes here */
   .bg-gradient-secondary-to-primary {
     background: theme(--gradient-secondary-to-primary);
   }
 
   .bg-contact-us-gradient {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0)
+    );
   }
 
+  .color-gradient-secondary-to-primary {
+    background: theme(--gradient-secondary-to-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-accordion {
+    background: theme(--gradient-accordion);
+  }
+
+  .bg-gradient-accordion-overlay {
+    position: relative;
+  }
+
+  .bg-gradient-accordion-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: theme(--gradient-accordion);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .bg-gradient-accordion-overlay > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .accordion-item:last-child {
+    border-bottom: none;
+    padding-bottom: 50px;
+  }
+
+  .border-gradient-secondary-to-primary {
+    padding: 17px;
+    background-color: white;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+  }
+
+  .border-gradient-secondary-to-primary::before {
+    content: "";
+    position: absolute;
+    background: theme(--gradient-secondary-to-primary);
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: 50%;
+  }
+
+  .text-gradient-secondary-to-primary {
+    background: theme(--gradient-secondary-to-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
