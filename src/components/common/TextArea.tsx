@@ -9,7 +9,10 @@ const TextArea = ({ label, required }: TextAreaProps) => {
       <label className="text-sm font-medium block mb-2 text-white/90">
         {label}
       </label>
-      <textarea className="input-field h-26 resize-none" required={required} />
+      <textarea
+        className="input-field h-26 md:h-20 max-sm:h-18 resize-none"
+        required={required}
+      />
     </div>
   );
 };
