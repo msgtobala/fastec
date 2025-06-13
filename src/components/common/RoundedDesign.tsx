@@ -23,8 +23,8 @@ const RoundedDesign = ({
   const paddingClass = sizeClasses[size];
   const pointerClass = isPointer ? "cursor-pointer" : "";
   const backgroundClass = isTransparent
-    ? "bg-white border-2 border-gradient-secondary-to-primary"
-    : "bg-gradient-secondary-to-primary max-md:p-4";
+    ? "bg-white border-gradient-secondary-to-primary"
+    : "bg-gradient-secondary-to-primary max-md:p-[17px]";
 
   const combinedClasses = [
     "rounded-full",

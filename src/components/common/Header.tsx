@@ -32,7 +32,7 @@ const Header = () => {
           />
         </div>
         <div className="flex items-center gap-30 sm:gap-8">
-          <nav className="flex space-x-10 font-family-inter font-light text-[14px] md:flex-row md:space-y-0 md:space-x-3 text-sm max-sm:hidden min-[640px]:space-x-3">
+          <nav className="flex space-x-10 font-family-inter font-light text-[14px] md:flex-row md:space-y-0 md:space-x-7 text-sm max-sm:hidden min-[640px]:space-x-3">
             {navItems.map((item) => (
               <NavItem
                 key={item.label}
@@ -45,7 +45,7 @@ const Header = () => {
           </nav>
           <button
             type="submit"
-            className="w-full sm:w-auto px-6 py-3 bg-gradient-secondary-to-primary text-white font-semibold rounded-full md:px-2 md:py-2 max-sm:hidden"
+            className="w-full sm:w-auto px-6 py-3 bg-gradient-secondary-to-primary text-white font-semibold rounded-full md:px-4 md:py-2 max-sm:hidden"
           >
             Request Call Back
           </button>

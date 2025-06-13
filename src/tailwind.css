@@ -58,6 +58,9 @@
 
 @layer components {
   /* Component classes here */
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {

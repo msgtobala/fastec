@@ -4,7 +4,7 @@ import SuccessRate from "./SuccessRate";
 
 const HeroBanner = () => {
   return (
-    <div className=" flex flex-wrap px-10 justify-between overflow-hidden">
+    <div className=" flex flex-wrap px-10 pb-32 justify-between overflow-hidden">
       <div className="flex-1 flex flex-col items-center max-[761px]:mt-10 mt-[100px]  space-y-6">
         <div className="space-y-10">
           <TopNotch />

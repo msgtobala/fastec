@@ -26,7 +26,10 @@ const visibleCardData = [
 
 const ServicesCards = () => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-center">
+    <div
+      id="services"
+      className="relative min-h-screen w-full flex flex-col justify-center"
+    >
       <div className="absolute inset-0 -z-10">
         <img
           src={Images.ServiceBackground.src}
@@ -60,7 +63,7 @@ const ServicesCards = () => {
         </p>
       </div>
 
-      <div className="max-[1360px]:hidden grid grid-cols-2 md:grid-cols-3 gap-6 absolute right-[100px] bottom-[-100px]">
+      <div className="max-[1360px]:hidden grid grid-cols-2 md:grid-cols-3 gap-6 absolute right-[100px] bottom-[-100px] ">
         {cardData.map((card, index) => {
           if (!card) {
             return <div key={`empty-${index}`} />;
@@ -79,7 +82,7 @@ const ServicesCards = () => {
         })}
       </div>
 
-      <div className="min-[1360px]:hidden grid grid-cols-2 sm:grid-cols-3 gap-3 place-items-center">
+      <div className="min-[1360px]:hidden grid grid-cols-2 sm:grid-cols-3 gap-3 place-items-center px-10 py-5">
         {visibleCardData.map((card, index) => {
           if (!card) {
             return <div key={`empty-${index}`} />;

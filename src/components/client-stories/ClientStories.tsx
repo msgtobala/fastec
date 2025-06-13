@@ -26,7 +26,10 @@ const ClientStories = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="flex flex-col flex-wrap gap-6 md:gap-10 p-4 md:p-10 mt-6 md:mt-10 w-[95%] md:w-[90%] mx-auto">
+    <div
+      id="about-us"
+      className="flex flex-col flex-wrap gap-6 md:gap-10 p-4 md:p-10 mt-6 md:mt-10 w-[95%] md:w-[90%] mx-auto"
+    >
       <div className="text-left">
         <h1 className="text-[32px] md:text-[42px] lg:text-[52px] font-medium uppercase leading-tight">
           Client <br />

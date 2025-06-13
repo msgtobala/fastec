@@ -9,8 +9,8 @@ const Search = () => {
     "Time slot for enquiry",
   ];
   return (
-    <div className="font-family-inter flex flex-col md:flex-row items-center justify-between w-[95%] md:w-[90%] mx-auto p-4 md:p-8 backdrop-blur-md shadow-base rounded-search bg-white">
-      <ul className="flex flex-col min-[1130px]:flex-row items-center justify-evenly w-full md:w-[60%] mb-4 md:mb-0">
+    <div className="font-family-inter flex flex-row items-center justify-between w-[95%] md:w-[90%] mx-auto p-4 md:p-8 backdrop-blur-md shadow-base rounded-search bg-white">
+      <ul className="flex max-[830px]:flex-col flex-row items-center justify-evenly w-full xl:w-[60%] lg:w-full">
         {searchItems.map((item, index) => (
           <li
             key={index}
@@ -22,7 +22,7 @@ const Search = () => {
         ))}
       </ul>
       <div className="flex items-center gap-2 md:gap-3">
-        <p className="text-secondary-text-blue text-sm md:text-base">
+        <p className="text-secondary-text-blue text-sm md:text-base max-xl:hidden">
           Get Started
         </p>
         <RoundedDesign
