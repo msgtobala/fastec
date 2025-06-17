@@ -1,6 +1,5 @@
-import { Images } from "../../lib/utils/Images";
-
 import Card from "../hero/Card";
+import { Images } from "../../lib/utils/Images";
 
 const cardData = [
   { number: "01", title: "Tailored solutions", isHighlighted: false },

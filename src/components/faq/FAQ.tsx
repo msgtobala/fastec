@@ -1,5 +1,5 @@
-import { Images } from "../../lib/utils/Images";
 import FAQAccordion from "./FAQAccordion";
+import { Images } from "../../lib/utils/Images";
 
 const FAQ = () => {
   return (

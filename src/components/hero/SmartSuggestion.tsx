@@ -1,5 +1,5 @@
-import { Images } from "../../lib/utils/Images";
 import Card from "./Card";
+import { Images } from "../../lib/utils/Images";
 
 const SmartSuggestion = () => {
   return (

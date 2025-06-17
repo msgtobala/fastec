@@ -2,16 +2,18 @@ import NavItem from "./NavItem";
 
 type MobileNavItemProps = {
   isOpen: boolean;
-  onClose: () => void;
   activeItem: string;
+  onClose: () => void;
   setActiveItem: (item: string) => void;
+  requestCallBack: () => void;
 };
 
 const MobileNavItem = ({
   isOpen,
-  onClose,
   activeItem,
+  onClose,
   setActiveItem,
+  requestCallBack,
 }: MobileNavItemProps) => {
   if (!isOpen) return null;
 
@@ -47,6 +49,10 @@ const MobileNavItem = ({
         </div>
         <div className="mt-6 ">
           <button
+            onClick={() => {
+              requestCallBack();
+              onClose();
+            }}
             type="submit"
             className="w-full sm:w-auto px-2 py-2 bg-gradient-secondary-to-primary text-white rounded-full font-light text-[12px]"
           >

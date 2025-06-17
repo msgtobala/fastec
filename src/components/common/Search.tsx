@@ -1,6 +1,7 @@
 import { IoChevronDown } from "react-icons/io5";
-import RoundedDesign from "./RoundedDesign";
 import { BiRightArrowAlt } from "react-icons/bi";
+
+import RoundedDesign from "./RoundedDesign";
 
 const Search = () => {
   const searchItems = [

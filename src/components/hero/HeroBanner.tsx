@@ -1,6 +1,6 @@
-import TopNotch from "../common/TopNotch";
 import SmartSuggestion from "./SmartSuggestion";
 import SuccessRate from "./SuccessRate";
+import TopNotch from "../common/TopNotch";
 
 const HeroBanner = () => {
   return (

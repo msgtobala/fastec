@@ -1,6 +1,6 @@
+import RoundedDesign from "../common/RoundedDesign";
 import { Icons } from "../../lib/utils/Icons";
 import { Images } from "../../lib/utils/Images";
-import RoundedDesign from "../common/RoundedDesign";
 
 const Gdp = () => {
   return (

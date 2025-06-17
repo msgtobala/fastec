@@ -1,8 +1,10 @@
+import { useEffect, useState } from "react";
+
+import { AnimatePresence, motion } from "framer-motion";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+
 import RoundedDesign from "../common/RoundedDesign";
 import ExampleStory from "./ExampleStory";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
 const ClientStories = () => {
   const [progress, setProgress] = useState(0);

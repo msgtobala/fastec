@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import { HiOutlineBars3 } from "react-icons/hi2";
-import { Icons } from "../../lib/utils/Icons";
 
 import NavItem from "./NavItem";
 import MobileNavItem from "./MobileNavItem";
+import { Icons } from "../../../lib/utils/Icons";
 
 const Header = () => {
   const [activeItem, setActiveItem] = useState("Home");
@@ -16,10 +16,21 @@ const Header = () => {
     { label: "Services", href: "#services" },
     { label: "Contact Us", href: "#contact-us" },
   ];
+
+  const handleRequestCallBack = () => {
+    window.location.href = "#contact-us";
+  };
+
+  const handleReload = () => {
+    window.location.reload();
+  };
   return (
     <>
       <header className="flex items-center relative justify-between px-[120px] lg:px-[100px] md:px-8  py-8 shadow-[5px_14px_45px_0_rgba(0,0,0,0.02)] rounded-3xl header-bg max-sm:px-3 min-[640px]:px-2">
-        <div className="flex items-center space-x-2">
+        <div
+          onClick={handleReload}
+          className="flex items-center space-x-2 cursor-pointer"
+        >
           <img
             src={Icons.Logo.src}
             alt={Icons.Logo.alt}
@@ -45,7 +56,8 @@ const Header = () => {
           </nav>
           <button
             type="submit"
-            className="w-full sm:w-auto px-6 py-3 bg-gradient-secondary-to-primary text-white font-semibold rounded-full md:px-4 md:py-2 max-sm:hidden"
+            className="cursor-pointer w-full sm:w-auto px-6 py-3 bg-gradient-secondary-to-primary text-white font-semibold rounded-full md:px-4 md:py-2 max-sm:hidden"
+            onClick={handleRequestCallBack}
           >
             Request Call Back
           </button>
@@ -58,9 +70,10 @@ const Header = () => {
           {isMobileNavOpen && (
             <MobileNavItem
               isOpen={isMobileNavOpen}
-              onClose={() => setIsMobileNavOpen(false)}
               activeItem={activeItem}
+              onClose={() => setIsMobileNavOpen(false)}
               setActiveItem={setActiveItem}
+              requestCallBack={handleRequestCallBack}
             />
           )}
         </div>

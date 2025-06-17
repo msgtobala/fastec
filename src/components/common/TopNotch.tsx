@@ -15,7 +15,7 @@ const TopNotch = ({ isTransparent }: TopNotchProps) => {
       />
       <div
         className={`absolute h-[17px] top-3 left-[53px] font-family-inter font-medium text-[#000000] text-sm tracking-[0] leading-[16.8px] whitespace-nowrap ${
-          isTransparent && "text-white"
+          isTransparent ? "text-white" : ""
         }`}
       >
         Top notch business consultancy

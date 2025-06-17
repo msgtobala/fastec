@@ -1,5 +1,5 @@
-import { Icons } from "../../lib/utils/Icons";
 import RoundedDesign from "../common/RoundedDesign";
+import { Icons } from "../../lib/utils/Icons";
 
 export interface CardProps {
   cardSize: "small" | "medium" | "large";
