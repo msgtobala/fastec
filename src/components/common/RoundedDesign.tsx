@@ -11,7 +11,7 @@ const RoundedDesign = ({
   icon,
   isTransparent,
   isPointer,
-  onClick,
+  onClick = () => {},
 }: RoundedDesignProps) => {
   const sizeClasses = {
     small: "p-2",
